@@ -6,7 +6,7 @@ def find_max_min(num):
     min = 10
     countmin = 0
     countmax = 0
-    n = 0
+    n = len(str(num))
     while 0 < num:
         if num % 10 > max:
             max = num % 10
@@ -14,9 +14,9 @@ def find_max_min(num):
         if num % 10 < min:
             min = num % 10
             countmin = n
-        n += 1
+        n -= 1
         num //= 10
-    if countmax > countmin:
+    if countmax < countmin:
         print(f"Максимальное число {max} левее минимального числа {min}")
     else:
         print(f"Максимальное число {max} правее минимального числа {min}")
