@@ -2,13 +2,12 @@
 # Определить, какая цифра расположена в нем левее: максимальная или минимальная.
 
 def find_max_min(num):
-    lenght = len(str(num))
     max = 0
     min = 10
     countmin = 0
     countmax = 0
-    n = 1
-    while n <= lenght:
+    n = 0
+    while 0 < num:
         if num % 10 > max:
             max = num % 10
             countmax = n
