@@ -15,7 +15,7 @@ void EvenNumbers()
 
 int[] FillArray(int[] array)
 {
-    Random rand = new Random(0);    //Ввел число 0, потому что без аргумента выделенно красным и мой перфекционист плачет)))) Есть ли вариант это исправить?
+    Random rand = new Random();    
 
     for(int i = 0; i < array.Length; i++) array[i] = rand.Next(100, 1000);
 
@@ -36,7 +36,7 @@ int FindEvenNumber(int[] array)
     while(i < array.Length)
     {
         even = array[i] % 2 == 0;   //Конечно же данный метод проще было бы сделать через цикл for, 
-        if(even)                    //но я решил попробовать, как работает перемнная bool. Мне понравилось!!!
+        if(even)                    //но я решил попробовать, как работает перемнная bool.
         {
             count++;
         }
