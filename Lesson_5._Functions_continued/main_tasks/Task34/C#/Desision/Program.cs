@@ -15,7 +15,7 @@ void EvenNumbers()
 
 int[] FillArray(int[] array)
 {
-    Random rand = new Random();    
+    Random rand = new Random();    // У моего внутреннего перфекциониста зубы скрепят, как можно исправить, чтобы функция Random() не была выделена как ошибка?
 
     for(int i = 0; i < array.Length; i++) array[i] = rand.Next(100, 1000);
 
