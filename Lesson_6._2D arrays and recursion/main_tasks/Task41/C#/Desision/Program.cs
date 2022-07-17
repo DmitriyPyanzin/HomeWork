@@ -55,7 +55,7 @@ void InputNumbers(int num)
 void RandomNumbers(int num)
 {
     int count = 0;
-    Random rand = new Random();
+    Random rand = new Random(Seed: -9);
     int randomNum;
     string rowNum = String.Empty;
     for (int i = 0; i < num; i++)
