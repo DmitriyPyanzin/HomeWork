@@ -1,5 +1,5 @@
 ﻿//Задача 58. Заполните спирально массив 4 на 4.
-
+/*
 void Zadacha58()                        //Главный метод
 {
     Console.Clear();
@@ -192,3 +192,76 @@ void MySignature()                                      //Моя подпись
 
 Zadacha58();
 MySignature();
+*/
+Console.Clear();
+int size = int.Parse(Console.ReadLine());
+int[,] array = new int[size, size];
+int count = 0;
+int i = -1;
+int j = -1;
+int num = -1;
+int perimeter = 0;
+int numSize = -1;
+
+while (count <= size * size)
+{
+    if (count == perimeter)
+    {
+        num += 2;
+        perimeter += (size - num) * 4;
+        i++;
+        j++;
+        numSize++;
+    }
+    if (i == numSize)
+    {
+        count++;
+        array[i, j] = count;
+        Console.WriteLine(array[i, j]);
+        j++;
+        if (j == size - 1 - numSize) i++;
+        
+    }
+    else if (j == size - 1 - numSize)
+    {
+        count++;
+        array[i, j] = count;
+        Console.WriteLine(array[i, j]);
+        i++;
+        if (i == size - 1 - numSize) j--;
+    }
+    else if (i == size - 1 - numSize)
+    {
+        count++;
+        array[i, j] = count;
+        Console.WriteLine(array[i, j]);
+        j--;
+        if (j == numSize) i--;
+    }
+    else if (j == numSize)
+    {
+        count++;
+        array[i, j] = count;
+        Console.WriteLine(array[i, j]);
+        i--;
+     }
+}
+
+void PrintMatrix(int[,] array, int size)                //Метод вывода массива
+{
+    Console.WriteLine();
+    Console.WriteLine("Вот такой массив получился!");
+    Console.WriteLine();
+    
+    for (int i = 0; i < size; i++)
+    {
+        for (int j = 0; j < size; j++)
+        {
+            
+            Console.Write(array[i, j] +"\t");
+        }
+        Console.WriteLine();
+    }
+}
+
+PrintMatrix(array, size);
