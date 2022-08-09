@@ -1,0 +1,18 @@
+def find_sum(num):
+    length = len(str(abs(num)))
+    sum = 0
+    for i in range(length + 1):
+        sum += num % 10
+        num //= 10
+    return print(sum)
+
+find_sum(int(input("Введите число: ")))
+
+def MySignature():
+    print()
+    print("________________________")
+    print("the program was implemented by Dmitry Pyanzin")
+    print("________________________")
+    print()
+
+MySignature()
