@@ -4,7 +4,7 @@
 
 Console.Clear();
 Console.Write("Введите натуральное число состоящее из различных цифр: ");
-string num = Console.ReadLine();
+string? num = Console.ReadLine();
 
 FindMaxMin(num);
 
