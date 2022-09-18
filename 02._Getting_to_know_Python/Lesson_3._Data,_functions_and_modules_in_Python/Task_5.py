@@ -21,7 +21,6 @@ for i in range(1, number + 1):
         arr.insert(0, fib(i) * -1)
     else:
         arr.insert(0, fib(i))
-    print(arr)
 print(arr)
 
 def MySignature():
