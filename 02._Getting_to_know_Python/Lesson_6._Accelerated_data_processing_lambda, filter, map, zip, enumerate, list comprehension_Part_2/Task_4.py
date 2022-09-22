@@ -9,8 +9,9 @@ for i in words:
 
 res = (list(map(lambda x: len(x), res)))        # lambda выражение и функция высшего порядка
 
-if sum(res) % len(res) == 0: print('Парам пам-пам')
-else: print('Пам парам')
+for i in range(1, len(res) - 1):
+    if res[0] == res[i]: print('Парам пам-пам')
+    else: print('Пам парам')
 
 def MySignature():
     print("\n________________________\nthe program was implemented by Dmitry Pyanzin\n________________________\n")
