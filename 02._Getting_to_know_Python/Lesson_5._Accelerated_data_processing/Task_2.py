@@ -52,14 +52,18 @@ def head():
         for i in range(9):
             if i > 4:
                 if win(board, 'x') == True:
+                    draw_board(board)
                     print('Победил игрок "x"\n')
                     break
                 elif win(board, 'o') == True:
+                    draw_board(board)
                     print('Победил игрок "o"\n')
                     break
             if i % 2 == 0: take_pos('x', board)
             else: take_pos('o', board)
-        if i == 8: print("Ничья\n")
+        if i == 8:
+            print("Ничья\n")
+            draw_board(board)
         break
     print("До скорой встречи!")
     Signature()
